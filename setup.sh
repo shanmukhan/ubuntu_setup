@@ -18,9 +18,22 @@ sudo vi /etc/crontab
 @reboot root echo 80 > /sys/class/power_supply/BAT1/charge_control_end_threshold
 
 
-# 3. Install jdk 17, 21
-sudo apt install openjdk-17-jdk
+# 3. Install jdk, anaconda and other utils
+# sudo apt install openjdk-17-jdk
 sudo apt install openjdk-21-jdk
+curl -O https://repo.anaconda.com/archive/Anaconda3-<INSTALLER_VERSION>-Linux-x86_64.sh
+# ex - https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
+sudo apt install wireshark
+sudo apt install meld
+
+sudo snap install libreoffice
+sudo snap install gimp
+sudo snap install intellij-idea-ultimate
+sudo snap install intellij-idea-community
+sudo snap install dataspell
+sudo snap install code
+sudo snap install audacity
+sudo snap install flutter
 
 
 # 4. Install Node
@@ -47,14 +60,8 @@ sudo apt install git
   cat ~/.ssh/id_ed25519.pub
   pwd
   ls -l
-  mkdir repo
-  ls -l
-  cd repo/
+  mkdir repo & cd repo
   git clone git@github.com:shanmukhan/vantillu.git
-  sudo apt install git
-  git clone git@github.com:shanmukhan/vantillu.git
-  ls -l
-  git clone git@github.com:shanmukhan/food_pi.git
   git clone git@github.com:shanmukhan/food_pi.git
   git clone git@github.com:shanmukhan/vantillu-fe.git
   git clone git@github.com:shanmukhan/ccme.git
@@ -114,5 +121,3 @@ sudo apt install git
   # you can run the broker in the background using:
   "/var/lib/ecook/bin/artemis" run
 
-
-# 10.
