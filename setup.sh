@@ -121,3 +121,28 @@ sudo apt install git
   # you can run the broker in the background using:
   "/var/lib/ecook/bin/artemis" run
 
+#10. NVIDIA settings
+  nvidia-settings -q CUDACores -t
+  # 2560
+  nvidia-smi
+#  Thu Aug 15 22:07:37 2024
+#  +---------------------------------------------------------------------------------------+
+#  | NVIDIA-SMI 535.183.01             Driver Version: 535.183.01   CUDA Version: 12.2     |
+#  |-----------------------------------------+----------------------+----------------------+
+#  | GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+#  | Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+#  |                                         |                      |               MIG M. |
+#  |=========================================+======================+======================|
+#  |   0  NVIDIA GeForce RTX 4050 ...    Off | 00000000:01:00.0  On |                  N/A |
+#  | N/A   43C    P8               4W /  80W |     49MiB /  6141MiB |     35%      Default |
+#  |                                         |                      |                  N/A |
+#  +-----------------------------------------+----------------------+----------------------+
+#
+#  +---------------------------------------------------------------------------------------+
+#  | Processes:                                                                            |
+#  |  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+#  |        ID   ID                                                             Usage      |
+#  |=======================================================================================|
+#  |    0   N/A  N/A      3196      G   /usr/lib/xorg/Xorg                           45MiB |
+#  +---------------------------------------------------------------------------------------+
+
