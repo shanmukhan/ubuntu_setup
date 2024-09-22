@@ -146,3 +146,4 @@ sudo apt install git
 #  |    0   N/A  N/A      3196      G   /usr/lib/xorg/Xorg                           45MiB |
 #  +---------------------------------------------------------------------------------------+
 
+modinfo nvidia | grep ^version
