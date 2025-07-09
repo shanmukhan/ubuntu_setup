@@ -1,11 +1,17 @@
 #!/bin/bash
 
 # 0. Create Group and User
-  sudo addgroup ecook
-  sudo adduser ecook
-  sudo addgroup ecook
+#  sudo addgroup ecook
+#  sudo adduser ecook
+#  sudo addgroup ecook
   # sudo useradd -s /bin/false -g ecook -d /opt/artemis ecook
 
+sudo apt install pip3
+sudo apt install python3-venv
+
+sudo -R chown shanmukhan /opt
+mkdir /opt/python3-venv
+python3 -m venv /opt/python3-ven
 
 # 1. to keep Windows and Ubuntu times are in sync
 timedatectl set-local-rtc 1  # this keeps to save time in Local timezone same as Windows
