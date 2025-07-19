@@ -6,6 +6,21 @@
 #  sudo addgroup ecook
   # sudo useradd -s /bin/false -g ecook -d /opt/artemis ecook
 
+# Disable deep C-states to avoid hanging of ubuntu when not in use
+sudo vi /etc/default/grub
+## Find below line
+### GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+## replace with
+### GRUB_CMDLINE_LINUX_DEFAULT="quiet splash processor.max_cstate=5"
+## Disable NVIDIA power management during idle
+sudo vi /etc/modprobe.d/nvidia-power-management.conf
+## add below line
+## options nvidia NVreg_DynamicPowerManagement=0x00
+## then
+sudo update-initramfs -u
+sudo reboot
+
+
 sudo apt install pip3
 sudo apt install python3-venv
 
