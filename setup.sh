@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt update
+
 # 0. Create Group and User
 #  sudo addgroup ecook
 #  sudo adduser ecook
@@ -21,7 +23,7 @@ sudo update-initramfs -u
 sudo reboot
 
 
-sudo apt install pip3
+sudo apt install python3-pip
 sudo apt install python3-venv
 
 sudo -R chown shanmukhan /opt
